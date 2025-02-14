@@ -1,7 +1,8 @@
 import { BrowserRouter,Route,Routes } from "react-router-dom";
 import {Home, Login, Signup ,Dashboard} from './pages/index';
-import { Navbar,Footer } from "./components/index"
-import PrivateRoutes from "./utilis/privateRoutes";
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer";
+import PrivateRoutes from "./utilis/PrivateRoutes";
 
 
 const AppRoutes = () => {
