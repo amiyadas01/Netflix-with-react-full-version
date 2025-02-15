@@ -8,6 +8,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(null);
 
   // Signup function
   const signup = async (email, password) => {
@@ -16,7 +17,8 @@ export const AuthProvider = ({ children }) => {
       return login(email, password); // Auto-login 
     } catch (error) {
       console.error("Signup Error:", error.message);
-      throw error;
+      
+     
     }
   };
 
@@ -30,7 +32,8 @@ export const AuthProvider = ({ children }) => {
       return getCurrentUser();
     } catch (error) {
       console.error("Login Error:", error.message);
-      throw error;
+      
+      
     }
   };
 
@@ -41,6 +44,7 @@ export const AuthProvider = ({ children }) => {
       setUser(null);
     } catch (error) {
       console.error("Logout Error:", error.message);
+      
     }
   };
 
@@ -54,10 +58,11 @@ export const AuthProvider = ({ children }) => {
     } catch (error) {
       setUser(null);
         console.error("user not found:", error.message);
+     
     } finally {
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 3500);
     }
   };
 
@@ -68,13 +73,16 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return (
+     
     <AuthContext.Provider value={{ user, signup, login, logout, loading }}>
-      {loading ? <div className=" flex items-center justify-center w-full h-screen"> <video className="w-full h-screen" loop muted autoPlay src="/loading.mp4"></video> </div> : children}
+       {loading ? <div className=" flex items-center justify-center w-full h-screen"> <video className="w-full h-screen" loop muted autoPlay src="/loading.mp4"></video> </div> : children}
+       {/* {error ? <div className=" flex items-center justify-center w-full text-wrap text-white h-screen text-4xl"><div className=" text-wrap w-70">{error}</div>  </div> : ""} */}
     </AuthContext.Provider>
   );
 };
 
 // Custom hook to use auth
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAuth = () => {
   return useContext(AuthContext);
 };

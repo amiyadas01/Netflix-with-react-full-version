@@ -5,11 +5,13 @@ function Button({
   bgColor = "bg-red-600",
   textColor = "text-white",
   className = "",
+  onClick,
   ...props
 }) {
   return (
     <button
-      className={`py-2 px-6 rounded-full ${bgColor} ${textColor} ${className}`}
+      className={` rounded-full ${bgColor} ${textColor} ${className}`}
+      onClick={onClick}
       {...props}
     >
       {children}

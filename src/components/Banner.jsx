@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { fetchMovies } from "../api/tmdb";
 
 
-function Banner() {
-  const [movie, setMovie] = useState(null);
+function Banner({children}) {
+  
+  const [movie, setMovie] = useState("");
 const url = (url) => `url(${url})`;
   useEffect(() => {
     const getMovies = async () => {
@@ -29,8 +31,8 @@ const url = (url) => `url(${url})`;
       backgroundImage: movie ? url(`https://image.tmdb.org/t/p/original${movie.backdrop_path}`) : "none",
     }}
   >
-    <div className=" absolute w-full h-full bg-gradient-to-r from-black via-transparent to-black"></div>
-    <h1 className="text-3xl  font-bold">{movie?.title || "Loading..."}</h1>
+    {/* <div className=" absolute w-full h-full bg-gradient-to-r from-black via-transparent to-black"></div> */}
+    <div className="text-3xl absolute font-bold">{children? children  : movie.title || "Loading..." }</div>
   </div>
 
   )
