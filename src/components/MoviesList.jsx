@@ -9,13 +9,15 @@ import "swiper/css/effect-coverflow";
 
 
 
-const MovieList = () => {
+// eslint-disable-next-line react/prop-types
+const MovieList = ({category}) => {
   const [movies, setMovies] = useState([]);
+  const [activeIndex,setActiveIndex] = useState(0);
 
   useEffect(() => {
     const getMovies = async () => {
       try {
-        const data = await fetchMovies("/discover/movie", { language: "en-US", page: 1 });
+        const data = await fetchMovies(category, { language: "en-US", page: 1 });
         setMovies(data.results);
       } catch (error) {
         console.error("Failed to fetch movies", error);
@@ -23,14 +25,15 @@ const MovieList = () => {
     };
 
     getMovies();
-  }, []);
+  }, [category]);
   
   return (
     <div className="w-full   mx-auto my-auto relative ">
-      <button className="absolute w-70  h-70 top-0 z-10  text-white " id="prevBtn">
+
+      <button className="absolute w-20 md:w-70 h-80  md:h-70 top-0 z-10  text-white " id="prevBtn">
         
       </button>
-      <button className="absolute w-70 h-70 right-0 top-0 z-10 text-white " id="nextBtn">
+      <button className="absolute w-20 md:w-70 h-80 md:h-70 right-0 top-0 z-10 text-white " id="nextBtn">
         
       </button>
 
@@ -40,7 +43,7 @@ const MovieList = () => {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={5}
-        spaceBetween={20}
+        spaceBetween={1}
         loop={true}
         autoplay ={{
           delay: 1500,
@@ -49,7 +52,7 @@ const MovieList = () => {
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 100,
+          depth: 80,
           modifier: 3,
           slideShadows: false,
         }}
@@ -57,6 +60,9 @@ const MovieList = () => {
         breakpoints={{
           640: { slidesPerView: 3 },
           1024: { slidesPerView: 5 },
+        }}
+        onSlideChange={(swiper) =>{
+          setActiveIndex(swiper.realIndex)
         }}
         onMouseEnter={(e) => {
           
@@ -68,25 +74,29 @@ const MovieList = () => {
         }}
         modules={[EffectCoverflow , Navigation, Autoplay]}
         className="mySwiper"
+        touchRatio={1}
+        simulateTouch={true}
+        touchStartPreventDefault ={false}
+        mousewheel={ {forceToAxis : true,sensitivity:1}}
       >
 
-      {movies.map((movie) => (
-        <SwiperSlide key={movie.id} className="relative">
-        {({ isActive }) => (
+      {movies.map((movie,index) => (
+        <SwiperSlide key={movie.id} className="relative w-full">
+        
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.6 }}
+            initial={{ scale: 0.8, opacity: 1 }}
             animate={{
-              scale: isActive ? 1.1 : 0.9,
-              opacity: isActive ? 1 : 0.5,
+              scale: index === activeIndex ? 1 : 0.9,
+              opacity: index === activeIndex ? 1 : 0.99,
             }}
             transition={{ duration: 0.5 }}
-            className={`relative overflow-hidden w-44 rounded-xl top-10 shadow-lg ${
-              !isActive ? "blur-sm" : ""
+            className={`relative overflow-hidden md:h-auto w-30 md:w-42 rounded-xl top-10 shadow-lg ${
+              index !== activeIndex ? "blur-[1.6px]" : ""
             }`}
           >
             <div className="  "><MovieCard  movie={movie} /></div>
           </motion.div>
-        )}
+        
       </SwiperSlide>
     ))}
   </Swiper>

@@ -26,7 +26,7 @@ const url = (url) => `url(${url})`;
 
   return (
     <div
-    className=" bg-black w-full h-[600px] bg-cover bg-center flex items-center justify-center relative text-white"
+    className=" bg-black w-full h-[500px] md:h-[600px] bg-cover bg-center flex items-center justify-center relative text-white"
     style={{
       backgroundImage: movie ? url(`https://image.tmdb.org/t/p/original${movie.backdrop_path}`) : "none",
     }}

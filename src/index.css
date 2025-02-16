@@ -3,3 +3,6 @@
 .text-glow{
     text-shadow: 0 0 5px #00f, 0 0 10px #00f , 0 0 15px #00f
 }
+.fast-spin{
+    animation: spin 0.2s linear infinite;
+}

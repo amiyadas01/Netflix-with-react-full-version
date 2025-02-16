@@ -20,11 +20,11 @@ function Navbar() {
   return (
     <div className='w-full h-22 absolute z-10 '>
 
-      <nav className=' w-[70%] h-full items-center mx-auto gap-[550px] flex '>
+      <nav className=' w-[50%] md:w-[70%] h-full items-center md:flex-row flex-col  mx-auto gap-[20px] md:gap-[550px] flex '>
         <div className=' text-4xl text-red-600 font-bold z-10'><Link to={location.pathname === "/dashboard" ? "/dashboard":"/" }><div className=' w-[160px]'><img src="/logo.svg" alt="Logo"/></div></Link></div>
         <div className=' flex gap-3'>
           <div>{location.pathname === "/" && !user && (
-            <div className='w-32 h-9 gap-16 bg-black/30 bg  flex justify-center relative items-center rounded-sm focus:ring-1 focus:border-2'>
+            <div className='w-32 h-9 gap-16 m-auto bg-black/30 bg  flex justify-center relative items-center rounded-sm focus:ring-1 focus:border-2'>
               <div role="img" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 16 16" width="16" height="16" data-icon="LanguagesSmall" aria-hidden="true"><path d="M10.7668 5.33333L10.5038 5.99715L9.33974 8.9355L8.76866 10.377L7.33333 14H9.10751L9.83505 12.0326H13.4217L14.162 14H16L12.5665 5.33333H10.8278H10.7668ZM10.6186 9.93479L10.3839 10.5632H11.1036H12.8856L11.6348 7.2136L10.6186 9.93479ZM9.52722 4.84224C9.55393 4.77481 9.58574 4.71045 9.62211 4.64954H6.41909V2H4.926V4.64954H0.540802V5.99715H4.31466C3.35062 7.79015 1.75173 9.51463 0 10.4283C0.329184 10.7138 0.811203 11.2391 1.04633 11.5931C2.55118 10.6795 3.90318 9.22912 4.926 7.57316V12.6667H6.41909V7.51606C6.81951 8.15256 7.26748 8.76169 7.7521 9.32292L8.31996 7.88955C7.80191 7.29052 7.34631 6.64699 6.9834 5.99715H9.06968L9.52722 4.84224Z" fill="currentColor"></path></svg></div>
             <select className='  bg-black/30 border-[1px] border-gray-400 absolute px-9 py-1 rounded-sm text-white appearance-none cursor-pointer ' name="Language" id="select lang">
               <option className='bg-white text-black appearance-none cursor-pointer ' value="English">English</option>
