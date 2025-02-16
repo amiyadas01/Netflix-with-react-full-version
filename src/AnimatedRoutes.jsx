@@ -2,6 +2,7 @@ import { useLocation,Route,Routes } from "react-router-dom";
 import {Home, Login, Signup ,Dashboard} from './pages/index';
 import PrivateRoutes from "./utilis/PrivateRoutes";
 import { AnimatePresence, motion } from "framer-motion";
+import Account from "./pages/Account";
 
 
 const pageVariants = {
@@ -35,6 +36,10 @@ const pageVariants = {
               element={<motion.div {...pageVariants}><Dashboard /></motion.div>}
             />
           </Route>
+          <Route
+          path="/account"
+          element={<motion.div {...pageVariants}>< Account /></motion.div>}
+          />
         </Routes>
       </AnimatePresence>
     );

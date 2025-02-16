@@ -20,8 +20,8 @@ function Navbar() {
   return (
     <div className='w-full h-22 absolute z-10 '>
 
-      <nav className=' w-[50%] md:w-[70%] h-full items-center md:flex-row flex-col  mx-auto gap-[20px] md:gap-[550px] flex '>
-        <div className=' text-4xl text-red-600 font-bold z-10'><Link to={location.pathname === "/dashboard" ? "/dashboard":"/" }><div className=' w-[160px]'><img src="/logo.svg" alt="Logo"/></div></Link></div>
+      <nav className=' w-[50%] md:w-[75%] h-full items-center md:flex-row flex-col  mx-auto gap-[20px] md:gap-[550px] flex '>
+        <div className=' text-4xl text-red-600 font-bold z-10'><Link to={location.pathname === "/dashboard" || location.pathname === "/account" ? "/dashboard":"/" }><div className=' w-[160px]'><img src="/logo.svg" alt="Logo"/></div></Link></div>
         <div className=' flex gap-3'>
           <div>{location.pathname === "/" && !user && (
             <div className='w-32 h-9 gap-16 m-auto bg-black/30 bg  flex justify-center relative items-center rounded-sm focus:ring-1 focus:border-2'>
@@ -35,20 +35,23 @@ function Navbar() {
             </div>
             </div>
             )}</div>
+          <div>{location.pathname === "/dashboard" && user && (
+            <div className='w-auto h-auto  m-auto text-glow text-lg pb-2   font-medium '> <Link to="/account"> Account</Link> </div>
+            )}</div>
           <div className='w-[ 80px]'> {location.pathname === "/" && !user && (
-            <Link to= "/login"><Button className=' w-[80px] text-[15px] text-nowrap h-[30px] rounded-sm'>log in </Button></Link>
+            <Link to= "/login"><Button className=' w-[80px] text-[15px] text-nowrap h-[30px] font-medium rounded-sm'>Log in </Button></Link>
             
             )} </div>
           <div className='w-[ 80px]'> {location.pathname === "/signup" && !user && (
-             <Link to= "/login"><Button className='w-[80px] text-[15px] text-nowrap h-[32px] rounded-sm'>log in </Button></Link>
+             <Link to= "/login"><Button className='w-[80px] text-[15px] text-nowrap h-[32px] font-medium rounded-sm'>Log in </Button></Link>
 
             )} </div>
           <div className='w-[ 80px]'> {location.pathname === "/login" && !user && (
-             <Link to= "/signup"><Button className='w-[80px] text-[15px] text-nowrap h-[32px] rounded-sm'>sign up </Button></Link>
+             <Link to= "/signup"><Button className='w-[80px] text-[15px] text-nowrap h-[32px] font-medium rounded-sm'>Sign up </Button></Link>
 
             )} </div>
           <div onClick={handleLogout} className='w-[ 80px]'> {user && (
-            <Button className=' w-[80px] text-[15px] text-nowrap h-[30px] rounded-sm'>sign out </Button>
+            <Button className=' w-[80px] text-[15px] text-nowrap font-medium h-[30px] rounded-sm'>Sign out </Button>
              )}</div>
         </div>
       </nav>
