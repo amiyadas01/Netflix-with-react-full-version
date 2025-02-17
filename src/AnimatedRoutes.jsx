@@ -35,11 +35,12 @@ const pageVariants = {
               path="/dashboard"
               element={<motion.div {...pageVariants}><Dashboard /></motion.div>}
             />
-          </Route>
-          <Route
+             <Route
           path="/account"
           element={<motion.div {...pageVariants}>< Account /></motion.div>}
           />
+          </Route>
+         
         </Routes>
       </AnimatePresence>
     );

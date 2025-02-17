@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 
-const MovieList = ({category,onMovieSelect }) => {
+const MovieList = ({category,onMovieSelect,number }) => {
   const [movies, setMovies] = useState([]);
   const prevBtnId = `prevBtn-${category.replace(/\W/g, '')}`
   const nextBtnId =`nextBtn-${category.replace(/\W/g, '')}`
@@ -86,11 +86,11 @@ const MovieList = ({category,onMovieSelect }) => {
               opacity:isActive? 1 : 0.99,
             }}
             transition={{ duration: 0.5 }}
-            className={`relative overflow-hidden ml-10 md:h-auto w-30 md:w-42 rounded-xl top-10 shadow-lg ${
+            className={`relative overflow-hidden ml-[-29px] md:ml-[45px] md:h-auto w-30 md:w-42 rounded-xl top-10 shadow-lg ${
               !isActive? "blur-[1.6px]" : ""
             }`}
           >
-            <div className="  "><MovieCard  movie={movie} index ={index} onSelect={() => onMovieSelect(movie)} /></div>
+            <div className="  "><MovieCard  movie={movie} index ={number === true?index :""} onSelect={() => onMovieSelect(movie)} /></div>
           </motion.div>
         )}
       </SwiperSlide>

@@ -10,7 +10,6 @@ import { FaTv, FaGlobe, FaUserPlus, FaChild,FaSpinner } from "react-icons/fa";
 // import { MdPerson} from "react-icons/Md";
 
 function Signup() {
-  // eslint-disable-next-line no-unused-vars
   const [email,setEmail] =useState("");
   const[loading,setLoading] = useState(false)
   const { register, handleSubmit, formState: { errors },setValue } = useForm();
@@ -26,7 +25,9 @@ function Signup() {
       setValue("email",savedEmail);
     }
   },[setValue])
-
+  const textCutter = (text, limit) => {
+    return text?.length > limit ? text.substring(0, limit) + "....." : text ;
+   }
   const onSubmit = async (data) => {
     setLoading(true);
     try {
@@ -37,7 +38,7 @@ function Signup() {
     } catch (error) {
       console.error("Signup Error:", error.message);
       localStorage.removeItem("signupEmail");
-      setResponse(error.message)
+      setResponse(()=>textCutter(error.message,70))
       setLoading(false)
     }
   };
@@ -50,7 +51,7 @@ function Signup() {
          <Banner category ="/discover/movie?with_genres=28,12,878"> <div></div></Banner>
          <div className=" absolute h-1 w-full z-2 bg-gradient-to-r from-pink-700/50 via-red-600 to-pink-700/50 bottom-0 left-0 rounded-[50%] " style={{clipPath : "ellipse(50% 100% at 50% 100%)"}}></div>
       </div>
-      <div className=" z-10 rounded-sm md:bg-black/50 h-[70vh] absolute w-[450px] mx-auto top-[11%] right-[-12%] md:right-[32%]">
+      <div className=" z-10 rounded-sm md:bg-black/50 h-[78vh] absolute w-[450px] mx-auto top-[11%] right-[-12%] md:right-[32%]">
       <h2 className="text-2xl font-bold ml-19 m-15 mb-4">Sign Up</h2>
       <form className=" w-[300px] m-auto " onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-5">
@@ -76,7 +77,7 @@ function Signup() {
         />
         {errors.password && <p className="text-red-500">{errors.password.message}</p>}
         {responce ? responce :""}
-        <Button type="submit" className="w-full py-2 mt-3 rounded-sm flex flex-row justify-center items-center gap-4">{loading ? <FaSpinner className=" fast-spin mr-2" size={20} /> : <p className="font-bold">Sign up</p>} <FaUserPlus className="text-white text-3xl" /></Button>
+        <Button type="submit" className="w-full py-2 mt-3 rounded-sm flex flex-row justify-center items-center gap-4">{loading ? <FaSpinner className=" fast-spin mr-2" size={20} /> : <p className="font-bold">Sign up</p>} <FaUserPlus className="text-white text-xl" /></Button>
       </form>
       <div className=" m-auto w-fit mt-4">Or</div>
 

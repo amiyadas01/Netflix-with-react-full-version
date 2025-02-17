@@ -2,7 +2,7 @@
 
 function Button({
   children,
-  bgColor = "bg-red-600",
+  bgColor = "bg-red-600/80",
   textColor = "text-white",
   className = "",
   onClick,
