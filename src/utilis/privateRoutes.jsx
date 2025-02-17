@@ -9,4 +9,4 @@ function PrivateRoutes() {
   
 }
 
-export default PrivateRoutes;
+export default PrivateRoutes
