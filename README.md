@@ -113,7 +113,7 @@ netflix-clone/
 │   ├── pages/
 │   ├── appwrite/
 │   ├── api/
-|   |__ context/
+│   ├── context/
 │   ├── utils/
 │   └── App.jsx
 ├── public/
