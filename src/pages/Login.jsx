@@ -54,10 +54,9 @@ export default function Login() {
          <div className=" absolute h-1 w-full z-2 bg-gradient-to-r from-pink-700/50 via-red-600 to-pink-700/50 bottom-0 left-0 rounded-[50%] " style={{clipPath : "ellipse(50% 100% at 50% 100%)"}}></div>
       </div>
       <div className=" z-10 absolute h-[80%] md:h-[100%]  w-full  top-0 flex">
-      <div className=" z-20 rounded-sm  lg:bg-black/50 h-fit p-10 w-[450px] m-auto ">
-      <h2 className="text-2xl font-bold ml-19 pt-7  m-15 mb-4">Login</h2>
-      <form className=" w-[300px] m-auto " onSubmit={handleSubmit(onSubmit)}>
-      <div className="mb-5">
+      <div className=" z-20 rounded-sm flex flex-col gap-10 justify-center items-center h-fit lg:bg-black/50 p-4  2xl:p-10 w-[450px] m-auto ">
+      <h2 className="text-2xl font-bold  ">Login</h2>
+      <form className=" w-[300px] m-x-auto flex justify-center items-center flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
         <Input
          
           type="email"
@@ -78,7 +77,7 @@ export default function Login() {
 
 
         />
-        {errors.email && <p className="text-red-500">{errors.email.message}</p>} </div>
+        {errors.email && <p className="text-red-500">{errors.email.message}</p>} 
 
         <Input
           
@@ -88,21 +87,13 @@ export default function Login() {
         />
         {errors.password && <p className="text-red-500">{errors.password.message}</p>}
           {responce ? responce :""}
-        <Button type="submit" className="w-full cursor-pointer py-2 mt-3 rounded-sm flex flex-row justify-center items-center gap-4">{loading ? <FaSpinner className=" fast-spin mr-2" size={20} /> : <p className="font-bold"> Log in</p> } <FaUserCheck className="text-white text-xl" /></Button>
+        <Button type="submit" className="w-full cursor-pointer py-2  rounded-sm flex flex-row justify-center items-center gap-4">{loading ? <FaSpinner className=" fast-spin mr-2" size={20} /> : <p className="font-bold"> Log in</p> } <FaUserCheck className="text-white text-xl" /></Button>
       </form>
-      <div className=" m-auto w-fit mt-4">Or</div>
+      <div className=" m-x-auto w-fit ">Or</div>
 
-    <div className=" m-auto w-fit mt-5">New to Netflix? <Link className=" font-bold  text-glow animate-pulse" to= "/signup">Sign up now.</Link>  </div>
-      {/* <div className="m-auto w-fit gap-20 flex flex-row mt-20">
-    <FaTv className="text-red-500 text-3xl" /> */}
-    {/* <MdPerson className="text-red-500 text-3xl" /> */}
-    {/* <FaGlobe className="text-red-500 text-3xl" /> */}
-    {/* <FaUserPlus className="text-red-500 text-3xl" /> */}
-    {/* <FaChild className="text-red-500 text-3xl" />
-    </div> */}
-    <div className=" text-[14px] z-20 text-left text-gray-400/50 w-[77%] absolute bottom-[-40%] m-auto">
-    {/* This page is a demo Model so . this is not have Google reCAPTCHA to ensure you are not a bot. <p className="text-glow"> Learn more.</p> */}
-    </div></div>
+    <div className=" m-x-auto w-fit">New to Netflix? <Link className=" font-bold  text-glow animate-pulse" to= "/signup">Sign up now.</Link>  </div>
+     
+    </div>
       </div>
     </div>
    

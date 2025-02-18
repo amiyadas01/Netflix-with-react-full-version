@@ -21,8 +21,8 @@ const AllMovies = ({ category, onMovieSelect }) => {
   }, [category]);
 
   return (
-    <div className="w-full mx-auto my-auto">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 p-4">
+    <div className="w-full mx-auto p-10 my-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5  gap-6 p-4">
         {movies.map((movie) => (
           <div key={movie.id} className="w-full ">
             <Movie movie={movie} onSelect={()=>onMovieSelect(movie)}/>

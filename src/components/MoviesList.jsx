@@ -66,14 +66,14 @@ const MovieList = ({ category, onMovieSelect, number }) => {
           640: { slidesPerView: 5 },
           1024: { slidesPerView: 6 },
           1280: { slidesPerView: 6.5 },
-          1536: {slidesPerView : 7}
+          1536: {slidesPerView : 8}
         }}
         modules={[EffectCoverflow, Navigation, Autoplay]}
         className="mySwiper"
         touchAngle={40}
       >
         {movies.slice(0,10).map((movie, index) => (
-          <SwiperSlide key={movie.id} className="relative w-full ">
+          <SwiperSlide key={movie.id} className="relative  m-x-auto w-full ">
             {({ isActive }) => (
               <motion.div
                 initial={{ scale: 0.9, opacity: 1 }}
@@ -82,7 +82,7 @@ const MovieList = ({ category, onMovieSelect, number }) => {
                   opacity: isActive ? 1 : 0.99,
                 }}
                 transition={{ duration: 0.5 }}
-                className={`relative h-75  w-30 md:w-42 rounded-xl top-10 shadow-lg ${
+                className={`relative h-75  w-30 md:w-42 lg:ml-6 2xl:ml-8 rounded-xl top-10 shadow-lg ${
                   !isActive ? "blur-[1.6px]" : ""
                 }`}
               >
@@ -98,7 +98,7 @@ const MovieList = ({ category, onMovieSelect, number }) => {
           </SwiperSlide>
         ))}
         {movies.slice(0,10).map((movie, index) => (
-          <SwiperSlide key={movie.id} className="relative w-full ">
+          <SwiperSlide key={movie.id} className="relative m-x-auto w-full ">
             {({ isActive }) => (
               <motion.div
                 initial={{ scale: 0.9, opacity: 1 }}
@@ -107,7 +107,7 @@ const MovieList = ({ category, onMovieSelect, number }) => {
                   opacity: isActive ? 1 : 0.99,
                 }}
                 transition={{ duration: 0.5 }}
-                className={`relative h-75  w-30 md:w-42 rounded-xl top-10 shadow-lg ${
+                className={`relative h-75  w-30 md:w-42 lg:ml-6  2xl:ml-8 rounded-xl top-10 shadow-lg ${
                   !isActive ? "blur-[1.6px]" : ""
                 }`}
               >

@@ -12,3 +12,7 @@
 .outline-text {
     -webkit-text-stroke : 1.7px white ;
 }
+html,body{
+    @apply overflow-x-hidden overscroll-none;
+    @apply min-h-fit
+}

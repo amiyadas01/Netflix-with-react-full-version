@@ -5,7 +5,7 @@ const Movie = ({ movie, onSelect }) => {
     return (
       <div 
         onClick={() => onSelect(movie)} 
-        className="bg-gray-800 items-center cursor-pointer h-[270px]   relative hover:scale-105 transition-all duration-300 rounded-lg shadow-md"
+        className="bg-gray-800 items-center cursor-pointer h-[300px]   relative hover:scale-105 transition-all duration-300 rounded-lg shadow-md"
       >
         
         <img

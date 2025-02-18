@@ -36,7 +36,7 @@ function Navbar() {
             </div>
             )}</div>
           <div>{location.pathname === "/dashboard" && user && (
-            <div className='w-auto h-auto  m-auto text-glow text-[16px] md:text-lg pb-1 md:pb-2   font-medium '> <Link to="/account"> Account</Link> </div>
+            <div className='w-auto h-auto  m-auto text-glow text-[16px] md:text-lg    font-medium '> <Link to="/account"> Account</Link> </div>
             )}</div>
           <div className='w-[ 80px] '> {location.pathname === "/" && !user && (
             <Link to= "/login"><Button className='w-[80px] text-[15px] text-nowrap cursor-pointer h-[32px] font-medium hover:bg-red-600 hover:scale-101 rounded-sm'>Log in </Button></Link>
@@ -51,7 +51,7 @@ function Navbar() {
 
             )} </div>
           <div onClick={handleLogout} className='w-[ 80px]'> {user && (
-            <Button className=' w-14 md:w-[80px] text-[10px] md:text-[15px] text-nowrap font-medium h-[25px] md:h-[30px] hover:bg-red-600 hover:scale-101  rounded-sm'>Sign out </Button>
+            <Button className=' w-14 md:w-[80px] text-[10px] md:text-[15px] text-nowrap font-medium h-[25px] md:h-[30px] hover:bg-red-600 hover:scale-101 cursor-pointer rounded-sm'>Sign out </Button>
              )}</div>
         </div>
       </nav>

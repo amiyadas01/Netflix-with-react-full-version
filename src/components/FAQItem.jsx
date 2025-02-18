@@ -12,7 +12,7 @@ const FAQItem = () => {
 
   return (
     <div className=" w-[80vw] m-auto  p-4">
-      <h2 className="md:text-2xl text-lg font-bold mb-4">Frequently Asked Questions</h2>
+      <h2 className="md:text-2xl text-lg pl-1 md:pl-4 2xl:pl-7 font-bold mb-4">Frequently Asked Questions</h2>
       {faqData.map((faq, index) => (
         <FAQ key={index} {...faq} />
       ))}
