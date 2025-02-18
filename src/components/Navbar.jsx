@@ -18,10 +18,10 @@ function Navbar() {
 
 
   return (
-    <div className='w-full h-22 absolute z-10 '>
+    <div className='w-full h-22 absolute top-0 z-30 '>
 
-      <nav className=' w-[50%] md:w-[75%] h-full items-center md:flex-row flex-col mx-auto gap-[20px] md:gap-[550px] flex '>
-        <div className=' text-4xl text-red-600 font-bold z-10'><Link to={location.pathname === "/dashboard" || location.pathname === "/account" ? "/dashboard":"/" }><div className=' w-[160px] p-5 md:p-0'><img src="/logo.svg" alt="Logo"/></div></Link></div>
+      <nav className=' md:w-full h-full  justify-around gap-1 sm:gap-9 md:gap-70 lg:gap-80 items-center mx-auto   flex '>
+        <div className='  text-xl md:text-4xl text-red-600 font-bold z-10'><Link to={location.pathname === "/dashboard" || location.pathname === "/account" ? "/dashboard":"/" }><div className=' w-[130px] md:w-[160px] p-5 md:p-0'><img src="/logo.svg" alt="Logo"/></div></Link></div>
         <div className=' flex justify-center items-center gap-3'>
           <div className='md:block hidden'>{location.pathname === "/" && !user && (
             <div className='w-32 h-9 gap-16 m-auto bg-black/30 bg  flex justify-center relative items-center rounded-sm focus:ring-1 focus:border-2'>
@@ -36,22 +36,22 @@ function Navbar() {
             </div>
             )}</div>
           <div>{location.pathname === "/dashboard" && user && (
-            <div className='w-auto h-auto  m-auto text-glow text-lg pb-2   font-medium '> <Link to="/account"> Account</Link> </div>
+            <div className='w-auto h-auto  m-auto text-glow text-[16px] md:text-lg pb-1 md:pb-2   font-medium '> <Link to="/account"> Account</Link> </div>
             )}</div>
           <div className='w-[ 80px] '> {location.pathname === "/" && !user && (
-            <Link to= "/login"><Button className=' w-[80px] bg-transparent md:bg-red-600/80 text-[15px] text-nowrap h-[30px] hover:bg-red-600 hover:scale-101 font-medium rounded-sm'>Log in </Button></Link>
+            <Link to= "/login"><Button className='w-[80px] text-[15px] text-nowrap cursor-pointer h-[32px] font-medium hover:bg-red-600 hover:scale-101 rounded-sm'>Log in </Button></Link>
             
             )} </div>
-          <div className='w-[ 80px] md:block hidden'> {location.pathname === "/signup" && !user && (
-             <Link to= "/login"><Button className='w-[80px] text-[15px] text-nowrap h-[32px] font-medium hover:bg-red-600 hover:scale-101 rounded-sm'>Log in </Button></Link>
+          <div className='w-[ 80px] '> {location.pathname === "/signup" && !user && (
+             <Link to= "/login"><Button className='w-[80px] text-[15px] text-nowrap cursor-pointer h-[32px] font-medium hover:bg-red-600 hover:scale-101 rounded-sm'>Log in </Button></Link>
 
             )} </div>
-          <div className='w-[ 80px] md:block hidden '> {location.pathname === "/login" && !user && (
-             <Link to= "/signup"><Button className='w-[80px] text-[15px] text-nowrap h-[32px] font-medium hover:bg-red-600 hover:scale-101 rounded-sm'>Sign up </Button></Link>
+          <div className='w-[ 80px]  '> {location.pathname === "/login" && !user && (
+             <Link to= "/signup"><Button className='w-[80px] cursor-pointer text-[15px] text-nowrap h-[32px] font-medium hover:bg-red-600 hover:scale-101 rounded-sm'>Sign up </Button></Link>
 
             )} </div>
           <div onClick={handleLogout} className='w-[ 80px]'> {user && (
-            <Button className=' w-[80px] text-[15px] text-nowrap font-medium h-[30px] hover:bg-red-600 hover:scale-101  rounded-sm'>Sign out </Button>
+            <Button className=' w-14 md:w-[80px] text-[10px] md:text-[15px] text-nowrap font-medium h-[25px] md:h-[30px] hover:bg-red-600 hover:scale-101  rounded-sm'>Sign out </Button>
              )}</div>
         </div>
       </nav>

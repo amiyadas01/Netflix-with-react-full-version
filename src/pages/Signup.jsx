@@ -45,13 +45,14 @@ function Signup() {
 
   return (
     
-    <div className="mx-auto h-[900px] relative ">
+    <div className="mx-auto h-[700px] relative  overflow-hidden">
       <div className="relative ">
       <div className=" absolute w-full z-2 h-full bg-gradient-to-r from-black via-black/50 to-black"></div>
          <Banner category ="/discover/movie?with_genres=28,12,878"> <div></div></Banner>
          <div className=" absolute h-1 w-full z-2 bg-gradient-to-r from-pink-700/50 via-red-600 to-pink-700/50 bottom-0 left-0 rounded-[50%] " style={{clipPath : "ellipse(50% 100% at 50% 100%)"}}></div>
       </div>
-      <div className=" z-10 rounded-sm md:bg-black/50 h-[78vh] absolute w-[450px] mx-auto top-[11%] right-[-12%] md:right-[32%]">
+      <div className=" z-10 absolute h-[80%] md:h-[100%]  w-full  top-0 flex">
+      <div className=" z-20 rounded-sm  lg:bg-black/50 h-fit p-10 w-[450px] m-auto ">
       <h2 className="text-2xl font-bold ml-19 m-15 mb-4">Sign Up</h2>
       <form className=" w-[300px] m-auto " onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-5">
@@ -77,7 +78,7 @@ function Signup() {
         />
         {errors.password && <p className="text-red-500">{errors.password.message}</p>}
         {responce ? responce :""}
-        <Button type="submit" className="w-full py-2 mt-3 rounded-sm flex flex-row justify-center items-center gap-4">{loading ? <FaSpinner className=" fast-spin mr-2" size={20} /> : <p className="font-bold">Sign up</p>} <FaUserPlus className="text-white text-xl" /></Button>
+        <Button type="submit" className="w-full py-2 mt-3 cursor-pointer rounded-sm flex flex-row justify-center items-center gap-4">{loading ? <FaSpinner className=" fast-spin mr-2" size={20} /> : <p className="font-bold">Sign up</p>} <FaUserPlus className="text-white text-xl" /></Button>
       </form>
       <div className=" m-auto w-fit mt-4">Or</div>
 
@@ -90,8 +91,8 @@ function Signup() {
     {/* <FaChild className="text-red-500 text-3xl" />
     </div> */}
     <div className=" text-[14px] text-left text-gray-400/50 w-[77%] absolute bottom-[-40%] m-auto">
-    This page is a demo Model so . this is not have Google reCAPTCHA to ensure you are not a bot. <p className="text-glow"> Learn more.</p>
-    </div>
+    {/* This page is a demo Model so . this is not have Google reCAPTCHA to ensure you are not a bot. <p className="text-glow"> Learn more.</p> */}
+    </div></div>
       </div>
     </div>
     

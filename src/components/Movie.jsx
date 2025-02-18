@@ -5,20 +5,20 @@ const Movie = ({ movie, onSelect }) => {
     return (
       <div 
         onClick={() => onSelect(movie)} 
-        className="bg-gray-800 items-center cursor-pointer p-2 pb-6 mb-4 relative hover:scale-105 transition-all duration-300 rounded-lg shadow-md"
+        className="bg-gray-800 items-center cursor-pointer h-[270px]   relative hover:scale-105 transition-all duration-300 rounded-lg shadow-md"
       >
         
         <img
           src={movie.poster_path ? `${imageBaseUrl}${movie.poster_path}` : "https://via.placeholder.com/500"}
           alt={movie.title}
-          className="w-full h-22 object-cover rounded-md"
+          className="w-full h-full object-cover rounded-md"
         />
   
         {/* Movie Details */}
-        <div className="ml-4 flex justify-center absolute bottom-1 left-1 items-center flex-col">
-          <h3 className="text-[10px] font-bold ">{movie.title}</h3>
+        {/* <div className="ml-4 flex justify-center absolute bottom-1 left-1 items-center flex-col"> */}
+          {/* <h3 className="text-[10px] font-bold ">{movie.title}</h3> */}
           {/* <p className="text-sm text-gray-400">{movie.overview?.slice(0, 100)}...</p> */}
-        </div>
+        {/* </div> */}
       </div>
     );
   };

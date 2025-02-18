@@ -24,12 +24,12 @@ function Home() {
     <div >
       <div className=" relative ">
       <div className=" absolute w-full h-full flex flex-row justify-center items-center ">
-          <div className=" text-white font-extrabold z-10 text-2xl md:text-6xl absolute pb-40  md:pb-60 ">Unlimited movies, TV </div>
-          <div className=" text-white font-extrabold z-10 text-2xl md:text-6xl absolute pb-23 md:pb-25">shows and more</div>
-          <div className=" text-white font-medium z-10 text-[15px] md:text-[22px] absolute pb-5 md:pt-8">Starts at ₹149. Cancel at any time.</div>
+          <div className=" text-white font-extrabold z-10 text-2xl md:text-4xl lg:text-6xl absolute pb-40 md:pb-52 lg:pb-60 ">Unlimited movies, TV </div>
+          <div className=" text-white font-extrabold z-10 text-2xl md:text-4xl lg:text-6xl absolute pb-23 md:pb-30  lg:pb-25">shows and more</div>
+          <div className=" text-white font-medium z-10 text-[15px] md:text-[20px] lg:text-[22px] absolute pb-5 md:pb-5 lg:pt-8">Starts at ₹149. Cancel at any time.</div>
           <div className=" text-white font-medium z-10 text-[8px] md:text-[16px] absolute pt-40 md:pt-35">Ready to watch? Enter your email to create or restart your membership.</div>
-          <div className=" z-10 absolute w-[90%]  md:w-[600px] max-w-[700px] pt-70 md:pt-63">
-         <div className=" flex max-w-[700px] gap-2">
+          <div className=" z-10  w-[300px]  md:w-[600px] max-w-[700px] pt-70 md:pt-63">
+         <div className="  flex  max-w-[300px] m-auto md:max-w-[700px] gap-2">
         <Input
           type="email"
           placeholder="Enter email"
@@ -71,10 +71,10 @@ function Home() {
         <div>
             <FAQItem/>
         </div>
-        <div className=" text-white font-medium z-10 text-[10px] md:text-[16px] md:w-[520px] pl-5 md:pl-0 pt-10 md:m-auto ">Ready to watch? Enter your email to create or restart your membership.</div>
+        <div className=" text-white font-medium z-10 text-[8px] md:text-[16px] md:w-[520px] w-[300px] pl-5 md:pl-0 pt-10 m-auto md:m-auto ">Ready to watch? Enter your email to create or restart your membership.</div>
         <div className="relative">
-        <div className=" z-10 w-[280px] md:w-[800px] m-auto pb-7  pt-8">
-         <div className=" flex max-w-[300px] md:max-w-[800px] gap-2 ">
+        <div className=" z-10 w-[280px] sm:w-[420px] md:w-[600px] lg:w-[800px] m-auto pb-7  pt-8">
+         <div className=" flex max-w-[300px] sm:max-w-[400px] md:max-w-[800px] gap-2 ">
         <Input
           type="email"
           placeholder="Enter email"

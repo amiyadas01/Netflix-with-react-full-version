@@ -59,7 +59,7 @@ useEffect(()=>{
 
   return (
     <div
-    className=" bg-black w-full h-[500px] md:h-[600px] bg-cover bg-center  relative text-white"
+    className=" bg-black w-full h-[500px] md:h-[95vh] bg-cover bg-center  relative text-white"
     style={{
       backgroundImage: movie ? url(`https://image.tmdb.org/t/p/original${movie.backdrop_path}`) : "none",
     }}
@@ -74,8 +74,8 @@ useEffect(()=>{
       </div>):(
     
     <div className=" relative">{children? children  : <div className=" absolute md:left-25 md:top-45 left-10 top-40 z-20"> 
-      <div className=" text-lg md:text-5xl font-extrabold text-stone-400">{movie.title}</div>
-          <div className=" max-w-[350px]  md:max-w-[450px] text-[#aeaeaeb1] mt-3 md:mt-5">{textCutter( movie.overview, 100)}</div> 
+      <div className=" text-lg md:text-5xl font-extrabold text-white">{movie.title}</div>
+          <div className=" max-w-[350px]  md:max-w-[450px] text-[#f0f0f0] mt-3 md:mt-5">{textCutter( movie.overview, 100)}</div> 
           <div className="md:text-md text-sm text-gray-400 mt-2.5 md:mt-5 gap-8 flex">
             <div className=" flex items-center justify-center gap-1 "> Rating :  <FaRegStar className="transition-all block duration-100 scale-130 text-yellow-300 bg-yellow-300 hover:bg-yellow-300 hover:scale-150 " style={{
               clipPath:" polygon( 50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%,2% 35%,39% 35%)"
@@ -85,11 +85,11 @@ useEffect(()=>{
             <div className="flex  gap-5 md:gap-7 mt-6 md:items-center ">   
             <div className=" md:flex md:items-center gap-5 md:justify-center">
               {/* <img width="40px" height="20px" className=" brightness-80" src="public\youtube.png" alt="" /> */}
-               <button className=" w-20 md:w-30 h-9 md:h-12 cursor-pointer rounded-md text-black hover:bg-stone-300/85 hover:text-gray-950 bg-stone-400" onClick={ () => {
+               <button className=" w-20 md:w-30 h-9 md:h-12 cursor-pointer rounded-md text-black hover:bg-stone-300/85 hover:text-gray-950 bg-white" onClick={ () => {
               SetShowTrailer(true)
             }}> <div className="md:text-[15px] text-[10px] flex justify-center gap-[6px]  items-center font-bold"> <div> <img width="12px" height="12px" src="/play.png" alt="▶" /></div> Play Now</div></button>
             </div>
-            <div className="Custom-trans md:flex justify-center items-center gap-10"> <button className=" Custom-trans md:min-w-fit w-20 font-bold rounded-md cursor-pointer text-stone-400/70 h-10 md:h-12  md:w-fit md:text-[15px] text-[10px] hover:bg-red-900/70 border-red-900 border-2 " onClick={msgHandler}> {  <p className="Custom-trans md:px-7">Full Movie</p> }</button> {msg? <div className="  px-7 text-stone-400/70 font-bold rounded-md flex justify-center text-[10px] md:text-[15px] items-center Custom-trans h-full w-full ">{msg} </div>: ""}</div>
+            <div className="Custom-trans md:flex justify-center items-center gap-10"> <button className=" Custom-trans md:min-w-fit w-20 font-bold rounded-md cursor-pointer text-stone-400/70 h-10 md:h-12  md:w-fit md:text-[15px] text-[10px] hover:bg-red-900/80 border-red-900 border-2 " onClick={msgHandler}> {  <p className="Custom-trans md:px-7">Full Movie</p> }</button> {msg? <div className="  px-7 text-stone-400/70 font-bold rounded-md flex justify-center text-[10px] md:text-[15px] items-center Custom-trans h-full w-full ">{msg} </div>: ""}</div>
             </div> 
       </div> || "Loading..." }</div>)}
   </div>
