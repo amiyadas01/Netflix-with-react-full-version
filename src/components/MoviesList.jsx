@@ -33,11 +33,11 @@ const MovieList = ({ category, onMovieSelect, number }) => {
   return (
     <div className="w-full  m-auto mx-auto my-auto relative ">
      <div className="relative w-full m-auto"> <button
-        className="absolute w-5 md:w-8 h-25  md:h-30 m-auto flex justify-center items-center top-20 md:top-25 z-10 left-4  rounded-md bg-gray-950/75 hover:bg-gray-800/75 text-white "
+        className="absolute w-5 md:w-8 h-25  md:h-30 m-auto cursor-pointer flex justify-center items-center top-20 md:top-25 z-10 left-4  rounded-md bg-gray-950/75 hover:bg-gray-800/75 text-white "
         id={prevBtnId}
       > <FaArrowLeft className="" /></button>
       <button
-        className="absolute w-5 md:w-8 h-25 md:h-30 m-auto flex justify-center items-center right-4 top-20 md:top-25 z-10 rounded-md bg-gray-950/75 hover:bg-gray-800/75 hover text-white "
+        className="absolute w-5 md:w-8 h-25 md:h-30 m-auto cursor-pointer flex justify-center items-center right-4 top-20 md:top-25 z-10 rounded-md bg-gray-950/75 hover:bg-gray-800/75 hover text-white "
         id={nextBtnId}
       ><FaArrowRight className=""/> </button></div>
 
@@ -82,7 +82,7 @@ const MovieList = ({ category, onMovieSelect, number }) => {
                   opacity: isActive ? 1 : 0.99,
                 }}
                 transition={{ duration: 0.5 }}
-                className={`relative h-75  w-30 md:w-42 lg:ml-6 2xl:ml-8 rounded-xl top-10 shadow-lg ${
+                className={`relative h-75  w-30 md:w-42 2xl:w-43 lg:ml-6 2xl:ml-8 rounded-xl top-10 shadow-lg ${
                   !isActive ? "blur-[1.6px]" : ""
                 }`}
               >
@@ -107,7 +107,7 @@ const MovieList = ({ category, onMovieSelect, number }) => {
                   opacity: isActive ? 1 : 0.99,
                 }}
                 transition={{ duration: 0.5 }}
-                className={`relative h-75  w-30 md:w-42 lg:ml-6  2xl:ml-8 rounded-xl top-10 shadow-lg ${
+                className={`relative h-75  w-30 md:w-42 lg:ml-6 2xl:w-43 2xl:ml-8 rounded-xl top-10 shadow-lg ${
                   !isActive ? "blur-[1.6px]" : ""
                 }`}
               >
