@@ -18,7 +18,7 @@ function Navbar() {
 
 
   return (
-    <div className='w-full h-22 absolute top-0 z-30 '>
+    <div className='w-full h-22 absolute  top-0 z-30 '>
 
       <nav className=' md:w-full h-full  justify-around gap-1 sm:gap-9 md:gap-70 lg:gap-80 items-center mx-auto   flex '>
         <div className='  text-xl md:text-4xl text-red-600 font-bold z-10'><Link to={location.pathname === "/dashboard" || location.pathname === "/account" ? "/dashboard":"/" }><div className=' w-[130px] md:w-[160px] p-5 md:p-0'><img src="/logo.svg" alt="Logo"/></div></Link></div>

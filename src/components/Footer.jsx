@@ -2,11 +2,11 @@
 
 const Footer = () => {
   return (
-    <footer className="bg-black h-[50vh] text-gray-400 text-sm 2xl:text-[20px] py-8">
+    <footer className="bg-black h-[70vh] md:h-[50vh] 2xl:h-[45vh] text-gray-400 text-sm 2xl:text-[19px]  py-8">
       <div className="max-w-6xl 2xl:max-w-7xl ml-10 md:ml-25 lg:ml-40 2xl:ml-55 m-auto ">
         <p className="mb-4">Questions? Call <a href="tel:000-800-919-1743" className="underline">000-800-919-1743</a></p>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-4  gap-10">
           <div className="space-y-2">
             <a href="#" className="block hover:underline">FAQ</a>
             <a href="#" className="block hover:underline">Investor Relations</a>

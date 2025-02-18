@@ -14,5 +14,5 @@
 }
 html,body{
     @apply overflow-x-hidden overscroll-none;
-    @apply min-h-fit
+    /* @apply min-h-fit */
 }

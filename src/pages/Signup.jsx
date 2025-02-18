@@ -45,7 +45,7 @@ function Signup() {
 
   return (
     
-    <div className="mx-auto h-[700px] relative  overflow-hidden">
+    <div className="md:mx-auto  h-fit relative ">
       <div className="relative ">
       <div className=" absolute w-full z-2 h-full bg-gradient-to-r from-black via-black/50 to-black"></div>
          <Banner category ="/discover/movie?with_genres=28,12,878"> <div></div></Banner>

@@ -47,11 +47,11 @@ export default function Login() {
 
   return (
    
-    <div className="md:mx-auto mx-0 h-[700px] overflow-hidden relative ">
+    <div className="md:mx-auto  h-fit relative ">
       <div className="relative ">
-      <div className=" absolute w-full z-2 h-full bg-gradient-to-r from-black via-black/40 to-black"></div>
+      <div className=" absolute w-full z-2 h-full bg-gradient-to-r from-black via-black/50 to-black"></div>
          <Banner category ="/discover/movie?with_genres=28,12,878"> <div></div></Banner>
-         <div className=" absolute h-1 w-full z-2 bg-gradient-to-r from-pink-700/50 via-red-600 to-pink-700/50 bottom-0 left-0 rounded-[50%] " style={{clipPath : "ellipse(50% 100% at 50% 100%)"}}></div>
+         <div className=" absolute h-1 w-full z-2 bg-gradient-to-r from-pink-700/50 via-red-600 to-pink-700/50 bottom-0  left-0 rounded-[50%] " style={{clipPath : "ellipse(50% 100% at 50% 100%)"}}></div>
       </div>
       <div className=" z-10 absolute h-[80%] md:h-[100%]  w-full  top-0 flex">
       <div className=" z-20 rounded-sm flex flex-col gap-10 justify-center items-center h-fit lg:bg-black/50 p-4  2xl:p-10 w-[450px] m-auto ">

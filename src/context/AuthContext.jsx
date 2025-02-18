@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
   const signup = async (email, password) => {
     try {
       await account.create("unique()", email, password);
-      // return login(email, password); // Auto-login 
+      return login(email, password); // Auto-login 
     } catch (error) {
       console.error("Signup Error:", error.message);
       throw error

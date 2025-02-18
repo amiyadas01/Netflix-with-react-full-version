@@ -59,7 +59,7 @@ function Home() {
       <div id="trending-sec" className="z-1 mt-10 w-full m-auto relative">
       
         <div className="text-2xl font-medium w-fit  m-auto">Trending Now</div>
-        <div className=" pb-20"><MovieList number={true} category ="/trending/all/week"/></div>
+        <div className=" pt-6"><MovieList number={true} category ="/trending/all/week"/></div>
         <div className=" absolute h-[2px] w-full z-2 bg-gradient-to-r from-[#282828] via-[#1e2939] to-[#282828] bottom-0 left-0 rounded-[50%] " style={{clipPath : "ellipse(50% 100% at 50% 100%)"}}></div>
         </div>
 
