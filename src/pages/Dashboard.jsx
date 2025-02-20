@@ -30,8 +30,8 @@ function Dashboard() {
     <Banner category ="/discover/movie?with_genres=28,12,878" className="2xl:h-[75vh]" selectedMovie={selectedMovie} />
        <div className=" absolute h-1 w-full z-2 bg-gradient-to-r from-pink-700/50 via-red-600 to-pink-700/50 bottom-0 left-0 rounded-[10%] " style={{clipPath : "ellipse(50% 100% at 50% 100%)"}}></div>
        </div>
-       <div id="trending-sec" className="z-1 pt-8 w-full Custom-trans h-fit m-auto relative">
-      <div className="md:text-2xl text-xl m-auto w-[90%] flex justify-between "><div className="font-medium  p-0 m-0">Trending Now</div> <button className="p-0 m-0 px-4 py-2 w-auto  items-center flex gap-4 rounded-sm md:text-[20px] text-[15px] cursor-pointer bg-gray-950/20 hover:bg-gray-500/50" onClick={()=> toggleShowMovies("trending")}>{showAllMovie.trending? "Go Back" :"See All"} {!showAllMovie.trending && <span><FaChevronRight className=" w-2"/></span>} </button> </div>
+       <div id="trending-sec " className="z-1 pt-8 w-full Custom-trans h-fit m-auto relative">
+      <div className="md:text-2xl text-xl m-auto Custom-trans w-[90%] flex justify-between "><div className="font-medium  p-0 m-0">Trending Now</div> <button className="p-0 m-0 px-4 py-2 w-auto  items-center flex gap-4 rounded-sm md:text-[20px] text-[15px] cursor-pointer bg-gray-950/20 hover:bg-gray-500/50" onClick={()=> toggleShowMovies("trending")}>{showAllMovie.trending? "Go Back" :"See All"} {!showAllMovie.trending && <span><FaChevronRight className=" w-2"/></span>} </button> </div>
       <div className="  ">{showAllMovie.trending? <AllMovies category="/trending/all/week" onMovieSelect={setSelectedMovie}/> :<MovieList  category ="/trending/all/week" number={false} onMovieSelect={setSelectedMovie}/>}</div>
       <div className=" absolute h-[2px] w-full z-2 bg-gradient-to-r from-[#282828] via-[#1e2939] to-[#282828] bottom-0 left-0 rounded-[50%] " style={{clipPath : "ellipse(50% 100% at 50% 100%)"}}></div>
       </div>

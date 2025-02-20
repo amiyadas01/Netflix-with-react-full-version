@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { fetchMovies } from "../api/tmdb";
 import { useEffect, useState } from "react";
-// import MovieCard from "./MoviesCard";
 import Movie from "./Movie";
 
 const AllMovies = ({ category, onMovieSelect }) => {

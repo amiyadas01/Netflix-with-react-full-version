@@ -66,10 +66,10 @@ useEffect(()=>{
     }}
   >
     {showTrailer && videoKey ? (
-      <div className=" absolute inset-0 flex justify-center items-center bottom-1 bg-black z-50">
+      <div className=" absolute inset-0 flex justify-center  items-center bottom-1 bg-black z-50">
         <button 
         onClick={() => { SetShowTrailer(false)}}
-        className=" absolute top-10 left-5 text-white  text-xl hover:bg-gray-400/50 bg-gray-400/10 px-4 p-2 rounded-full"
+        className=" absolute top-10 2xl:top-10 z-10 left-5 2xl:left-[50%] text-white cursor-pointer text-xl 2xl:text-2xl hover:bg-gray-400/50 bg-gray-400/10 px-4 p-2 rounded-full"
         >x </button>
         <iframe className="w-full h-full" src={`https://www.youtube.com/embed/${videoKey}?autoplay=1&controls=1`} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen ></iframe>
       </div>):(

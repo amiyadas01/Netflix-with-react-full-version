@@ -37,7 +37,7 @@ export default function Login() {
       await login(data.email, data.password);
       setResponse("succesfully loged in ✔")
      setEmail("succesfull.")
-      navigate("/dashboard"); // Successful login ke baad redirect
+      navigate("/dashboard"); // Successful login redirect
     } catch (error) {
       console.error("Login Error:", error.message);
       setResponse(error.message);
