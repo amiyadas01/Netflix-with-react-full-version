@@ -13,7 +13,7 @@ const FAQ = ({ question, answer }) => {
       >
         {question}
         <span className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>
-        <svg  xmlns="http://www.w3.org/2000/svg"
+        <svg  xmlns="https://www.w3.org/2000/svg"
                         viewBox="0 0 24 24" width="48" height="48" color="#ffffff" fill="none">
                         <path d="M12 4V20" stroke="currentColor"  />
                         <path d="M4 12H20" stroke="currentColor"  />
