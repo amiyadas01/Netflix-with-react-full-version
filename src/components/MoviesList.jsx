@@ -33,11 +33,11 @@ const MovieList = ({ category, onMovieSelect, number }) => {
   return (
     <div className="w-full  m-auto mx-auto my-auto relative ">
      <div className="relative w-full m-auto"> <button
-        className="absolute w-5 md:w-8 h-25  md:h-30 m-auto cursor-pointer flex justify-center items-center top-14 md:top-19 z-10 left-4  rounded-md bg-gray-950/75 hover:bg-gray-800/75 text-white "
+        className="absolute w-5 md:w-8 h-25  md:h-30 m-auto cursor-pointer flex justify-center items-center top-7 sm-top-8 md:top-16 z-10 left-4  rounded-md bg-gray-950/75 hover:bg-gray-800/75 text-white "
         id={prevBtnId}
       > <FaArrowLeft className="" /></button>
       <button
-        className="absolute w-5 md:w-8 h-25 md:h-30 m-auto cursor-pointer flex justify-center items-center right-4 top-14 md:top-19 z-10 rounded-md bg-gray-950/75 hover:bg-gray-800/75 hover text-white "
+        className="absolute w-5 md:w-8 h-25 md:h-30 m-auto cursor-pointer flex justify-center items-center right-4 top-7 sm-top-8 md:top-16 z-10 rounded-md bg-gray-950/75 hover:bg-gray-800/75 hover text-white "
         id={nextBtnId}
       ><FaArrowRight className=""/> </button></div>
 
