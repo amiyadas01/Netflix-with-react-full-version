@@ -9,7 +9,7 @@ const AllMovies = ({ category, onMovieSelect }) => {
   useEffect(() => {
     const getMovies = async () => {
       try {
-        const data = await fetchMovies(category, { language: "en-US", page: 1 });
+        const data = await fetchMovies(category, { language: ["en-US","hi-IN","fr-FR","es-ES","ja-JP"], page: 1 });
         setMovies(data.results);
       } catch (error) {
         console.error("Failed to fetch movies", error);
@@ -20,7 +20,7 @@ const AllMovies = ({ category, onMovieSelect }) => {
   }, [category]);
 
   return (
-    <div className="w-full mx-auto p-1 md:p-10 2xl:px-40  my-auto">
+    <div className="w-full mx-auto p-1 md:p-10 2xl:px-20  my-auto">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 2xl:grid-cols-6  gap-6 p-4">
         {movies.map((movie) => (
           <div key={movie.id} className="w-full ">

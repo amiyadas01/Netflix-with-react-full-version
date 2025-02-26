@@ -3,7 +3,7 @@ const MovieCard = ({ movie ,onSelect,index}) => {
   const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
 
   return (
-    <div onClick={() => onSelect(movie)} className="bg-gray-800 h-44 md:h-60  rounded-lg shadow-md z-50 relative text-white">
+    <div onClick={() => onSelect(movie)} className="bg-gray-800 2xl:ml-6  lg:ml-4 lg:max-w-46 rounded-lg shadow-md z-50 relative text-white">
       <img
         src={movie.poster_path ? `${imageBaseUrl}${movie.poster_path}` : "https://via.placeholder.com/500"}
         alt={movie.title}

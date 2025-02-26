@@ -18,7 +18,7 @@ const MovieList = ({ category, onMovieSelect, number }) => {
     const getMovies = async () => {
       try {
         const data = await fetchMovies(category, {
-          language: "en-US",
+          language: ["en-US","hi-IN","fr-FR","es-ES","ja-JP"],
           page: 1,
         });
         setMovies(data.results);
@@ -46,7 +46,7 @@ const MovieList = ({ category, onMovieSelect, number }) => {
         grabCursor={true}
         centeredSlides={true}
         // slidesPerView={5}
-        spaceBetween={-20}
+        spaceBetween={-2}
         loop={true}
         loopAdditionalSlides={7}
         autoplay={{
@@ -82,17 +82,15 @@ const MovieList = ({ category, onMovieSelect, number }) => {
                   opacity: isActive ? 1 : 0.99,
                 }}
                 transition={{ duration: 0.5 }}
-                className={`relative h-75  w-30 md:w-42 2xl:w-43 lg:ml-6 2xl:ml-8 rounded-xl top-0 shadow-lg ${
+                className={`relative  h-50 sm:h-60 md:h-70 lg:h-75 2xl:h-77  rounded-xl top-0 shadow-lg ${
                   !isActive ? "blur-[1.6px]" : ""
                 }`}
               >
-                <div className="  ">
                   <MovieCard
                     movie={movie}
                     index={number === true ? index : <p></p>}
                     onSelect={() => onMovieSelect(movie)}
                   />
-                </div>
               </motion.div>
             )}
           </SwiperSlide>
@@ -107,17 +105,15 @@ const MovieList = ({ category, onMovieSelect, number }) => {
                   opacity: isActive ? 1 : 0.99,
                 }}
                 transition={{ duration: 0.5 }}
-                className={`relative h-75  w-30 md:w-42 lg:ml-6 2xl:w-43 2xl:ml-8 rounded-xl top-0 shadow-lg ${
+                className={`relative   h-50 sm:h-60 md:h-70 lg:h-75 2xl:h-77 rounded-xl top-0 shadow-lg ${
                   !isActive ? "blur-[1.6px]" : ""
                 }`}
               >
-                <div className="  ">
                   <MovieCard
                     movie={movie}
                     index={number === true ? index : <p></p>}
                     onSelect={() => onMovieSelect(movie)}
                   />
-                </div>
               </motion.div>
             )}
           </SwiperSlide>

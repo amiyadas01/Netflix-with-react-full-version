@@ -21,7 +21,7 @@ useEffect(()=>{
   useEffect(() => {
     const getMovies = async () => {
       try {
-        const data = await fetchMovies(category, { language: "en-US", page: 1 });
+        const data = await fetchMovies(category, { language: ["en-US","hi-IN","fr-FR","es-ES","ja-JP"], page: 1 });
         if (data.results.length > 0) {
           const randomMovie = data.results[Math.floor(Math.random() * data.results.length)];
           setMovie(randomMovie);
@@ -60,7 +60,7 @@ useEffect(()=>{
   return (
     
     <div
-    className={` bg-black w-full h-[400px] md:h-[95vh]  bg-cover bg-center  relative text-white ${className} `}
+    className={` bg-black w-full h-[400px] md:h-[65vh] lg:h-[95vh]  bg-cover bg-center  relative text-white ${className} `}
     style={{
       backgroundImage: movie ? url(`https://image.tmdb.org/t/p/original${movie.backdrop_path}`) : "none",
     }}
