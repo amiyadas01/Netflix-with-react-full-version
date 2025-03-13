@@ -7,7 +7,7 @@
 A Netflix clone built with React, Vite, and Tailwind CSS, featuring user authentication, movie streaming, and a responsive design. The application uses TMDB API for movie data and AppWrite for authentication.
 
 ## ⚡ Live Demo
-[View Live Demo](your-deployed-url-here)
+[View Live Demo](https://amiya-dass-2004-04-03.netlify.app/) 
 
 ## 🚀 Features
 
