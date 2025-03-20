@@ -65,9 +65,9 @@ npm install
 
 3. Create a .env file in the root directory
 env
-VITE_APPWRITE_PROJECT_ID="67aeb85e000ad4d0096f"
-VITE_APPWRITE_ENDPOINT=36d8967ac462a21b35bc4efd7cfcbc81
-VITE_TMDB_API_KEY=eyJhbGciOiJIUzI1NiJ9
+VITE_APPWRITE_PROJECT_ID=""
+VITE_APPWRITE_ENDPOINT=
+VITE_TMDB_API_KEY=
 
 
 4. Start the development server
