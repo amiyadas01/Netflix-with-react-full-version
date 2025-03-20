@@ -108,17 +108,29 @@ npm run dev
 
 
 netflix-clone/
+
 ├── src/
+
 │   ├── components/
+
 │   ├── pages/
+
 │   ├── appwrite/
+
 │   ├── api/
+
 │   ├── context/
+
 │   ├── utils/
+
 │   └── App.jsx
+
 ├── public/
+
 ├── .env
+
 └── package.json
+
 
 
 ## 🔍 Usage
